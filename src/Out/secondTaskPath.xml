@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAYS>
+  <DAY>
+    <DATE>2021-04-15</DATE>
+    <NUMBER_OF_SALE>22</NUMBER_OF_SALE>
+  </DAY>
+  <DAY>
+    <DATE>2021-04-13</DATE>
+    <NUMBER_OF_SALE>56</NUMBER_OF_SALE>
+  </DAY>
+  <DAY>
+    <DATE>2021-04-12</DATE>
+    <NUMBER_OF_SALE>21</NUMBER_OF_SALE>
+  </DAY>
+  <DAY>
+    <DATE>2021-04-11</DATE>
+    <NUMBER_OF_SALE>102</NUMBER_OF_SALE>
+  </DAY>
+</DAYS>

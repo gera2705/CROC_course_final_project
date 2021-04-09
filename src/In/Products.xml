@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PRODUCTS>
+    <PRODUCT>
+        <PRODUCT_ID>1</PRODUCT_ID>
+        <NAME>bread</NAME>
+    </PRODUCT>
+    <PRODUCT>
+        <PRODUCT_ID>2</PRODUCT_ID>
+        <NAME>milk</NAME>
+    </PRODUCT>
+    <PRODUCT>
+        <PRODUCT_ID>3</PRODUCT_ID>
+        <NAME>fish</NAME>
+    </PRODUCT>
+    <PRODUCT>
+        <PRODUCT_ID>4</PRODUCT_ID>
+        <NAME>meet</NAME>
+    </PRODUCT>
+
+</PRODUCTS>

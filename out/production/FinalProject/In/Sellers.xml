@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<SELLERS>
+    <SELLER>
+        <SELLER_ID>1</SELLER_ID>
+        <SURNAME>Колосов</SURNAME>
+        <NAME>Вячеслав</NAME>
+    </SELLER>
+
+    <SELLER>
+        <SELLER_ID>2</SELLER_ID>
+        <SURNAME>Иванов</SURNAME>
+        <NAME>Иван</NAME>
+    </SELLER>
+
+    <SELLER>
+        <SELLER_ID>3</SELLER_ID>
+        <SURNAME>Васильев</SURNAME>
+        <NAME>Андрей</NAME>
+    </SELLER>
+
+    <SELLER>
+        <SELLER_ID>4</SELLER_ID>
+        <SURNAME>Щукин</SURNAME>
+        <NAME>Николай</NAME>
+    </SELLER>
+
+</SELLERS>

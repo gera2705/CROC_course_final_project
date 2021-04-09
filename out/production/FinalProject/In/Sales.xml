@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SALES>
+    <SALE>
+       <SALE_ID>1</SALE_ID> 
+       <SELLER_ID>1</SELLER_ID>
+       <PRODUCT_ID>1</PRODUCT_ID>
+       <NUMBER_OF_SALES>14</NUMBER_OF_SALES>
+       <DATE>2021-04-11</DATE>
+    </SALE>
+
+    <SALE>
+        <SALE_ID>2</SALE_ID> 
+        <SELLER_ID>2</SELLER_ID>
+        <PRODUCT_ID>1</PRODUCT_ID>
+        <NUMBER_OF_SALES>9</NUMBER_OF_SALES>
+        <DATE>2021-04-11</DATE>
+     </SALE>
+
+    <SALE>
+        <SALE_ID>3</SALE_ID>
+        <SELLER_ID>3</SELLER_ID>
+        <PRODUCT_ID>4</PRODUCT_ID>
+        <NUMBER_OF_SALES>16</NUMBER_OF_SALES>
+        <DATE>2021-04-11</DATE>
+    </SALE>
+
+    <SALE>
+        <SALE_ID>4</SALE_ID>
+        <SELLER_ID>4</SELLER_ID>
+        <PRODUCT_ID>3</PRODUCT_ID>
+        <NUMBER_OF_SALES>28</NUMBER_OF_SALES>
+        <DATE>2021-04-11</DATE>
+    </SALE>
+
+    <SALE>
+        <SALE_ID>5</SALE_ID>
+        <SELLER_ID>1</SELLER_ID>
+        <PRODUCT_ID>4</PRODUCT_ID>
+        <NUMBER_OF_SALES>35</NUMBER_OF_SALES>
+        <DATE>2021-04-11</DATE>
+    </SALE>
+
+     <SALE>
+        <SALE_ID>6</SALE_ID>
+        <SELLER_ID>1</SELLER_ID>
+        <PRODUCT_ID>2</PRODUCT_ID>
+        <NUMBER_OF_SALES>1</NUMBER_OF_SALES>
+        <DATE>2021-04-12</DATE>
+     </SALE>
+ 
+     <SALE>
+         <SALE_ID>7</SALE_ID>
+         <SELLER_ID>2</SELLER_ID>
+         <PRODUCT_ID>1</PRODUCT_ID>
+         <NUMBER_OF_SALES>20</NUMBER_OF_SALES>
+         <DATE>2021-04-12</DATE>
+      </SALE>
+
+    <SALE>
+        <SALE_ID>8</SALE_ID>
+        <SELLER_ID>3</SELLER_ID>
+        <PRODUCT_ID>1</PRODUCT_ID>
+        <NUMBER_OF_SALES>56</NUMBER_OF_SALES>
+        <DATE>2021-04-13</DATE>
+    </SALE>
+
+    <SALE>
+        <SALE_ID>9</SALE_ID>
+        <SELLER_ID>1</SELLER_ID>
+        <PRODUCT_ID>2</PRODUCT_ID>
+        <NUMBER_OF_SALES>22</NUMBER_OF_SALES>
+        <DATE>2021-04-15</DATE>
+    </SALE>
+
+ 
+
+</SALES>
