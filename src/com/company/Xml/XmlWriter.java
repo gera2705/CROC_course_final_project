@@ -1,7 +1,6 @@
 package com.company.Xml;
 
 import com.company.Model.ProductAvailability;
-import com.company.Model.Seller;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
@@ -11,7 +10,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -25,9 +23,8 @@ public class XmlWriter {
     /**
      * метод для записи в xml результатов выполнения первого задания
      * @param map слоарь хранящий , ключ - id товара, значение - объект с информацией о товаре.
-     * @param sellers лист хранящий в себе всех продавцов
      */
-    public static void writeXmlForFirstTask(Map<Integer , Optional<ProductAvailability>> map , List<Seller> sellers){
+    public static void writeXmlForFirstTask(Map<Integer , Optional<ProductAvailability>> map){
         Document document = new Document();
 
         document.setRootElement(new Element("PRODUCTS"));
@@ -36,28 +33,34 @@ public class XmlWriter {
             Optional<ProductAvailability> value = products.getValue();
             ProductAvailability productAvailability = value.get();
 
-            Seller s = findSeller(productAvailability.getSellerID(), sellers);
-
             Element product = new Element("PRODUCT");
 
             Element productID = new Element("PRODUCT_ID");
-            productID.addContent(String.valueOf(productAvailability.getProductID()));
+            productID.addContent(String.valueOf(productAvailability.getProduct().getProductID()));
             product.addContent(productID);
+
+            Element productName = new Element("PRODUCT_NAME");
+            productName.addContent(productAvailability.getProduct().getName());
+            product.addContent(productName);
+
+            Element productPrice = new Element("PRODUCT_PRICE");
+            productPrice.addContent(String.valueOf(productAvailability.getPrice()));
+            product.addContent(productPrice);
 
             Element maxQuantityInStock = new Element("MAX_QUANTITY_IN_STOCK");
             maxQuantityInStock.addContent(String.valueOf(productAvailability.getQuantityInStock()));
             product.addContent(maxQuantityInStock);
 
             Element sellerID = new Element("SELLER_ID");
-            sellerID.addContent(String.valueOf(s.getSellerID()));
+            sellerID.addContent(String.valueOf(productAvailability.getSeller().getSellerID()));
             product.addContent(sellerID);
 
             Element surname = new Element("SURNAME");
-            surname.addContent(s.getSurname());
+            surname.addContent(productAvailability.getSeller().getSurname());
             product.addContent(surname);
 
             Element name = new Element("NAME");
-            name.addContent(s.getName());
+            name.addContent(productAvailability.getSeller().getName());
             product.addContent(name);
 
             document.getRootElement().addContent(product);
@@ -74,22 +77,6 @@ public class XmlWriter {
         }
     }
 
-    /**
-     * метод поиска продавца по id
-     * @param id номер продавца
-     * @param sellers лист со всеми продавцами
-     * @return объект класса Seller
-     */
-    public static Seller findSeller(int id , List<Seller> sellers){
-        Seller foundSeller = null;
-        for (Seller seller : sellers){
-            if (id == seller.getSellerID()){
-                foundSeller = seller;
-                break;
-            }
-        }
-        return foundSeller;
-    }
 
     /**
      * метод для записи в xml результатов выполнения второго задания

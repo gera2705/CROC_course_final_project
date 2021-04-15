@@ -111,11 +111,15 @@ public class XmlParser {
      */
     private static Sale getSale(Node node) {
       Sale sale = new Sale();
+      Seller seller = new Seller();
+      Product product = new Product();
         if(node.getNodeType() == Node.ELEMENT_NODE){
             Element element = (Element) node;
             sale.setSaleID(Integer.parseInt(getTagValue("SALE_ID" , element)));
-            sale.setSellerID(Integer.parseInt(getTagValue("SELLER_ID" , element)));
-            sale.setProductID(Integer.parseInt(getTagValue("PRODUCT_ID" , element)));
+            seller.setSellerID(Integer.parseInt(getTagValue("SELLER_ID" , element)));
+            sale.setSeller(seller);
+            product.setProductID(Integer.parseInt(getTagValue("PRODUCT_ID" , element)));
+            sale.setProduct(product);
             sale.setNumberOfSale(Integer.parseInt(getTagValue("NUMBER_OF_SALES" , element)));
             sale.setDate(LocalDate.parse(getTagValue("DATE" , element)));
 
@@ -212,17 +216,24 @@ public class XmlParser {
      * @return объекта типа ProductAvailability
      */
     private static ProductAvailability getProductAvailability(Node node){
-        ProductAvailability product = new ProductAvailability();
+        ProductAvailability productAvailability = new ProductAvailability();
+        Seller seller = new Seller();
+        Product product = new Product();
         if(node.getNodeType() == Node.ELEMENT_NODE){
             Element element = (Element) node;
-            product.setSellerID(Integer.parseInt(getTagValue("SELLER_ID" , element)));
+
+            seller.setSellerID(Integer.parseInt(getTagValue("SELLER_ID" , element)));
+            productAvailability.setSeller(seller);
+
             product.setProductID(Integer.parseInt(getTagValue("PRODUCT_ID" , element)));
-            product.setPrice(Integer.parseInt(getTagValue("PRICE" , element)));
-            product.setQuantityInStock(Integer.parseInt(getTagValue("QUANTITY_IN_STOCK" , element)));
+            productAvailability.setProduct(product);
+
+            productAvailability.setPrice(Integer.parseInt(getTagValue("PRICE" , element)));
+            productAvailability.setQuantityInStock(Integer.parseInt(getTagValue("QUANTITY_IN_STOCK" , element)));
 
         }
 
-        return product;
+        return productAvailability;
     }
 
     /**
